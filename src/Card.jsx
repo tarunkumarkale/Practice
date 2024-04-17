@@ -1,12 +1,13 @@
 import React from 'react';
 
-const Card = ({ id,title,description,author }) => {
+const Card = ({ id, title, description, author,del}) => {
   return (
-    <div className="bg-white rounded-lg shadow-md p-4 flex flex-col align-middle">
-<h1 className="text-center uppercase font-semibold">{author}</h1>  
-
-      <h1 className="text-center uppercase font-semibold">{id}</h1>
-      <p className="text-center text-gray-700">{description}</p>
+    <div style={{ backgroundColor: 'black', borderRadius: 'lg', boxShadow: 'xl', padding: '4', display: 'flex',flexDirection:'column', alignItems: 'center',marginTop:'20px',marginLeft:'20px',marginRight:'20px'}}>
+      <h1 style={{ textAlign: 'center', textTransform: 'uppercase', fontWeight: 'bold',color:'white' }}>{title}</h1>
+      <h1 style={{ textAlign: 'center', textTransform: 'uppercase', fontWeight: 'bold',color:'white'  }}>{author}</h1>
+      <h1 style={{ textAlign: 'center', textTransform: 'uppercase', fontWeight: 'bold',color:'white'  }}>{id}</h1>
+      <p style={{ textAlign: 'center', textTransform: 'uppercase', fontWeight: 'bold',color:'white' }}>{description}</p>
+      <button onClick={del}>delete</button>
     </div>
   );
 };

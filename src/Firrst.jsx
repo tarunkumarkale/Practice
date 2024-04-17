@@ -27,14 +27,21 @@ const Firrst = () => {
       ];
       
       
-Const [rst,setrst]=useState(fakeData)
+const [rst,setrst]=useState(fakeData)
+
+console.log(rst)
 
 
+const Delete=(get)=>{
+    const testing=fakeData.filter((ele,index)=>ele.id!==get)
+    setrst(testing)
+    
+}
 
   return (
     <div>
    {
-    rst.map((ele,index)=> <Card   {...ele} />)
+    rst.map((ele,index)=> <Card key={ele.id}  del={()=>Delete(ele.id)}   {...ele} />)
    }
     </div>
   )
