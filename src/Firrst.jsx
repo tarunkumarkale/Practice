@@ -38,11 +38,17 @@ const Delete=(get)=>{
     
 }
 
+
   return (
     <div>
    {
     rst.map((ele,index)=> <Card key={ele.id}  del={()=>Delete(ele.id)}   {...ele} />)
    }
+   <input type="text" placeholder="Enter your name" />
+<button onClick={()=>hello()}>Submit</button>
+
+
+
     </div>
   )
 }
