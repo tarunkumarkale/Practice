@@ -8,9 +8,7 @@ const first=()=>{
 }
 
   return (
-    <div style={{display:'flex',flexDirection:'row'}}>
-<Firrst></Firrst>         jsdkfjkdsjfkds
-    </div>
+ 
   )
 }
 
